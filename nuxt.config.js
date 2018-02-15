@@ -13,7 +13,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  srcDir: 'projects/home',
+  srcDir: 'src/home',
   /*
   ** Global CSS
   */
