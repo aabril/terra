@@ -1,197 +1,106 @@
 <template>
-<!-- Original Pen : https://codepen.io/kilchenmann/pen/adoodO  -->
-<div class='container'>
-  <div class='post-module hover'>
-    <div class='thumbnail'>
-      <img src='https://thumbs.gfycat.com/InferiorAnxiousAustralianfreshwatercrocodile-max-1mb.gif'>
-    </div>
-    <div class='post-content'>
-      <div class='category'>Error 404</div>
-      <h1 class='title'>Oops</h1>
-<h3>This is not the page you are looking for.</h3>
-      <h2 class='sub_title'>404 (Page Not Found) Error</h2>
-      <p class='description'>
-
-      </p>
-      <div class='post-meta'>
-        <span class='comments'>
-          <a href='/'>&#8592; Go to the front page</a>
-        </span>
-      </div>
-    </div>
+<div class="content">
+  <div class="browser-bar">
+    <span class="close button"></span>
+    <span class="min button"></span>
+    <span class="max button"></span>
+  </div>
+  <div class="text" v-html="text">
   </div>
 </div>
 </template>
+
 <script>
 export default {
-  props: ['error']
+  data () {
+    return {
+      text: `
+        Oops! It looks like you're lost. <br> 
+        Let me try and help. <br>
+        Go back <a href='/'>home</a> and start over.
+        `
+    }
+  },
+  head: {
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js' }
+    ],
+    link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
+    ]
+  }
 }
 </script>
 
-<style scoped>
+<style>
 body {
-  background: #f2f2f2;
-  font-family: 'proxima-nova-soft', sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.post-module {
-  position: relative;
-  z-index: 1;
-  display: block;
-  background: #ffffff;
-  min-width: 270px;
-  width: 400px;
-  height: 580px;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all 0.3s linear 0s;
-  -moz-transition: all 0.3s linear 0s;
-  -ms-transition: all 0.3s linear 0s;
-  -o-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-}
-.post-module:hover,
-.hover {
-  -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-}
-.post-module:hover .thumbnail img,
-.hover .thumbnail img {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 1;
-}
-.post-module .thumbnail {
-  background: #000000;
-  height: 400px;
-  overflow: hidden;
-}
-.post-module .thumbnail img {
-  display: block;
-  width: 110%;
-  -webkit-transition: all 0.3s linear 0s;
-  -moz-transition: all 0.3s linear 0s;
-  -ms-transition: all 0.3s linear 0s;
-  -o-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
-}
-.post-module .post-content {
-  position: absolute;
-  bottom: 0;
-  background: #e0e0e0;
-  width: 100%;
-  padding: 30px;
-  -webkti-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-  -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-  -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-  -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-  transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
-}
-.post-module .post-content .category {
-  position: absolute;
-  top: -34px;
-  left: 0;
-  background: #e74c3c;
-  padding: 10px 15px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.post-module .post-content .title {
-  margin: 0;
-  padding: 0 0 10px;
-  color: #333333;
-  font-size: 26px;
-  font-weight: 700;
-}
-.post-module .post-content .sub_title {
-  margin: 0;
-  padding: 0 0 20px;
-  color: #e74c3c;
-  font-size: 20px;
-  font-weight: 400;
-}
-.post-module .post-content .description {
-  display: none;
-  color: #666666;
-  font-size: 14px;
-  line-height: 1.8em;
-}
-.post-module .post-content .post-meta {
-  margin: 30px 0 0;
-  color: #999999;
-}
-.post-module .post-content .post-meta .timestamp {
-  margin: 0 16px 0 0;
-}
-.post-module .post-content .post-meta a {
-  color: #999999;
-  text-decoration: none;
-}
-.hover .post-content .description {
-  display: block !important;
-  height: auto !important;
-  opacity: 1 !important;
-}
-.container {
-  max-width: 800px;
-  min-width: 640px;
-  margin: 0 auto;
-}
-.container:before,
-.container:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.container .column {
-  width: 50%;
-  padding: 0 25px;
-  -webkti-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.container .column .demo-title {
-  margin: 0 0 15px;
-  color: #666666;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.container .info {
-  width: 300px;
-  margin: 50px auto;
-  text-align: center;
-}
-.container .info h1 {
-  margin: 0 0 15px;
-  padding: 0;
-  font-size: 24px;
-  font-weight: 400;
-  color: #333333;
-}
-.container .info span {
-  color: #666666;
-  font-size: 12px;
-}
-.container .info span a {
-  color: #000000;
-  text-decoration: none;
-}
-.container .info span .fa {
-  color: #e74c3c;
+  background: #000;
+  color: #fff;
+  font-family: "Lucida Console", Monaco, monospace;
+  line-height: 1.5;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: solid 2px;
+}
+
+@media (min-width: 640px) {
+  body {
+    background-image: url(https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=960&ixlib=rb-0.3.5&q=50&w=1440);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  .content {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 45px 20px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border-radius: 5px 5px 0 0;
+  }
+
+  .browser-bar {
+    background: #f9f9f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .button {
+    display: inline-block;
+    float: left;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+
+  .close {
+    background: #fc635d;
+  }
+
+  .min {
+    background: #fdbc40;
+  }
+
+  .max {
+    background: #34c84a;
+  }
+}
 </style>
