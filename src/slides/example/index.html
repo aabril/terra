@@ -8,11 +8,22 @@
   <link href='highlight.css' rel='stylesheet' type='text/css' />
   <style>
     .new-shiny { background: #aaaaaa; }
-    img.center { width: 400px; position: absolute; margin: auto; top: 0; bottom: 0; right: 0; left: 0; }
+    img.center { visibility: hidden; width: 400px; position: absolute; margin: auto; top: 0; bottom: 0; right: 0; left: 0; }
   </style>
   <script src='big.js'></script>
   <script src='highlight.js'></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    function funcRef(h) {
+      var section = h.newURL.split("#")[1]
+      console.log(section)
+      if(section==='4') {
+        var el = document.querySelector('img.center')
+        el.style.visibility = 'visible'
+      }
+    }
+    window.addEventListener("hashchange", funcRef, false);
+  </script>
 </head>
 <body class='dark'>
   <div>
