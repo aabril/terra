@@ -1,13 +1,13 @@
 import express from 'express'
 import { Nuxt, Builder } from 'nuxt'
-import setRoutes from './routes'
+import routes from './routes'
 
 const app = express()
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 
 app.set('port', port)
-setRoutes(app)
+app.use(routes)
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
