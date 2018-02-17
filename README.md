@@ -1,4 +1,4 @@
-# sputnik
+# terra 
 
 > Nuxt.js project
 
