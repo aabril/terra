@@ -2,6 +2,12 @@
 
 > Nuxt.js project
 
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Terra_%28transparent%29.png/400px-Terra_%28transparent%29.png"/>
+
+
+
 ## Build Setup
 
 ``` bash
