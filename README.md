@@ -10,8 +10,7 @@ This app does not implements any database neither write/update actions since
 it's goal it's to keep it simple, and being able to build it's SPA version.
 ```
 
-![](https://raw.githubusercontent.com/aabril/terra/master/src/home/static/logo.png
-| height=180)
+![](https://raw.githubusercontent.com/aabril/terra/master/src/home/static/logo.png | height=180)
 
 ## Build Setup
 
