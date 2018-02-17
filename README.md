@@ -4,8 +4,9 @@
 
 
 <img
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Terra_%28transparent%29.png/400px-Terra_%28transparent%29.png"/>
-
+  style="margin: 0 auto; height: 360px;"
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Terra_%28transparent%29.png/400px-Terra_%28transparent%29.png"
+/>
 
 
 ## Build Setup
