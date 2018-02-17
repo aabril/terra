@@ -3,16 +3,15 @@
 > Nuxt + Express with an API and Statics
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus
-orci, condimentum eu mauris eu, venenatis posuere ligula. Donec luctus libero
-sed odio ultricies malesuada. 
+Basic app that combines [NuxtJS](nuxtjs.org) and [Express 4](expressjs.com)
+aimed to serve statics endpoints combined with the parent main nuxtjs app. 
 
+This app does not implements any database neither write/update actions since
+it's goal it's to keep it simple, and being able to build it's SPA version.
 ```
 
-<div style="text-align:center">
-  <img src="https://raw.githubusercontent.com/aabril/terra/master/src/home/static/logo.png" style="height:200px" />
-</div>
-
+![](https://raw.githubusercontent.com/aabril/terra/master/src/home/static/logo.png
+| height=180)
 
 ## Build Setup
 
